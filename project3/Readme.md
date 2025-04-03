@@ -1,4 +1,4 @@
-# Node.js Project Setup  
+# Project Setup  
 
 This project uses `package-lock.json` to ensure consistent dependency installation.  
 
@@ -6,5 +6,6 @@ This project uses `package-lock.json` to ensure consistent dependency installati
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   git clone https://github.com/ayush098-hub/DockerProjects.git
+   cd DockerProjects/project3
+   npm install
