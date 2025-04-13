@@ -1,0 +1,27 @@
+<section class="contact">
+  <h2>Contact Me</h2>
+  <form (ngSubmit)="onSubmit()">
+    <input
+      type="text"
+      name="name"
+      [(ngModel)]="contactForm.name"
+      placeholder="Your Name"
+      required
+    />
+    <input
+      type="email"
+      name="email"
+      [(ngModel)]="contactForm.email"
+      placeholder="Your Email"
+      required
+    />
+    <textarea
+      name="message"
+      [(ngModel)]="contactForm.message"
+      placeholder="Your Message"
+      required
+    ></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+

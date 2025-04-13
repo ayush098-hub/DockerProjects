@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+ frontend:
+  image: portfolio
+  ports:
+   - 42001:4200
+  depends_on:
+   - backend
+  networks:
+   - portnet
+ backend:
+  image: backend
+  ports:
+   - 3000:3000
+  depends_on:
+   - postgres
+  networks:
+   - portnet
+ postgres:
+  image: postgres
+  ports:
+   - 5432:5432
+  environment:
+   POSTGRES_USER: postgres
+   POSTGRES_PASSWORD: postgres
+   POSTGRES_DB: postgres
+  networks:
+   - portnet
+  volumes:
+   - postgresdata:/var/lib/postgresql/data
+volumes:
+  postgresdata:
+    external: true
+networks:
+ portnet:
